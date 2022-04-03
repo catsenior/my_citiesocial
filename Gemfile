@@ -29,6 +29,8 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'omniauth-google-oauth2', '~> 1.0', '>= 1.0.1'
 gem 'figaro', '~> 1.2'
 gem "omniauth-rails_csrf_protection"
+gem 'paranoia', '~> 2.6'
+gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,7 +62,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
   gem 'foreman', '~> 0.87.1'
   gem 'hirb-unicode', '~> 0.0.5'
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '~> 5.1', '>= 5.1.1'
   gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
   gem 'faker', '~> 2.11'
   gem 'pry-rails', '~> 0.3.9'
