@@ -6,6 +6,7 @@ class Admin::ProductsController < Admin::BaseController
 
   def new
     @product = Product.new
+    @product.skus.new
   end
 
   def create
@@ -21,7 +22,7 @@ class Admin::ProductsController < Admin::BaseController
   end
   
   def update
-    if @product.save
+    if @product.update(product_params)
       redirect_to edit_admin_product_path, notice:'商品更新成功'
     else
       render :edit, notice: '商品更新失敗'
@@ -41,7 +42,11 @@ class Admin::ProductsController < Admin::BaseController
                                     :vendor_id,
                                     :list_price,
                                     :sell_price,
-                                    :on_sell)
+                                    :on_sell,
+                                    :description,
+                                    skus_attributes:[
+                                      :id, :spec, :quantity, :_destroy
+                                    ] )
   end
 
   def find_product

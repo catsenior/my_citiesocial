@@ -21,3 +21,6 @@ import "scripts/frontend";
 
 import "styles/shared";
 import "styles/frontend";
+
+require("trix")
+require("@rails/actiontext")

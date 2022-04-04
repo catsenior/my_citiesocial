@@ -5,6 +5,9 @@ import * as ActiveStorage from "@rails/activestorage"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+// enable action text
+import "trix"
+import "@rails/actiontext"
 
 import "controllers";
 
