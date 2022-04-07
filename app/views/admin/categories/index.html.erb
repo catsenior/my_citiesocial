@@ -1,0 +1,24 @@
+<h1 class="title"></h1>
+<%= link_to '新增類別',new_admin_category_path,class:'button is-primary'%>
+
+<article class="maeeage">
+  <div class="message-body">小提示：可使用拖拉調整分類順序喔！</div>
+</article>
+
+<table class="table is-fullwidth has-shadowed">
+  <thead>
+    <tr>
+      <th>名稱</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody class="sortable-items">
+    <% @categories.each do |category| %>
+    <tr class="item" data-item="<%= dom_id(category)%>">
+      <td><i class="fa-solid fa-grip-vertical"></i>&nbsp<%= link_to category.name,edit_admin_category_path(category) %> </td>
+      <td><%= link_to '刪除',admin_category_path(category),method: :delete,data:{confirm:'確認刪除'},class:'button is-danger'%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

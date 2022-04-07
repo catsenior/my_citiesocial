@@ -1,3 +1,13 @@
 .new_sku{
   margin-bottom: 1em;
 }
+
+.sortable-items{
+  .item{
+    cursor: pointer;
+  }
+}
+
+.sortable-drag{
+  background-color: #f1f1f1;
+}
