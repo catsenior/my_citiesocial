@@ -10,7 +10,7 @@ set :repo_url, 'git@github.com:catsenior/my_citiesocial.git'
 set :branch, 'main'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/deploy/my_citiesocial'
-
+set :rvm_custom_path, '/usr/share/rvm'
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 set :scm, :git
