@@ -339,6 +339,7 @@ DEPENDENCIES
   acts_as_list (~> 1.0, >= 1.0.4)
   bootsnap (>= 1.4.4)
   byebug
+  capistrano (~> 3.0)
   capistrano-passenger (~> 0.2.1)
   capistrano-rails (~> 1.6, >= 1.6.2)
   capistrano-rvm
