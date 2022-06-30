@@ -10,9 +10,9 @@ set :repo_url, 'git@github.com:catsenior/my_citiesocial.git'
 set :branch, 'main'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/home/deploy/my_citiesocial'
-set :rvm_type, :user
 set :rvm_ruby_version, '2.6.6' # Defaults to: 'default'
-set :default_shell, '/bin/bash -l'
+set :rvm_custom_path, '/usr/share/rvm'
+set :rvm_type, :user
 # set :rvm_custom_path, '~/.myveryownrvm' # only needed if not detected
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
