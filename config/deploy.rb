@@ -4,6 +4,7 @@ lock '~> 3.17.0'
 
 set :application, 'my_citiesocial'
 set :repo_url, 'git@github.com:catsenior/my_citiesocial.git'
+set :deploy_to, "/home/deploy/#{fetch :application}"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
