@@ -4,7 +4,7 @@
 # You can define all roles on a single server, or split them:
 set :branch, 'main'
 
-server '34.81.22.189', user: 'deploy', roles: %w[app db web], my_property: :my_value
+server '34.80.248.191', user: 'deploy', roles: %w[app db web], my_property: :my_value
 
 set :rvm_type, :user
 set :rvm_ruby_version, '2.6.6'
