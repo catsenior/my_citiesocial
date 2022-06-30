@@ -38,10 +38,6 @@ gem 'paranoia', '~> 2.6'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'capistrano-passenger', '~> 0.2.1'
-  gem 'capistrano-rails', '~> 1.6', '>= 1.6.2'
-  gem 'capistrano-rvm'
-  gem 'capistrano', '~> 3.0'
 end
 
 group :development do

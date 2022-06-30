@@ -9,14 +9,11 @@ set :repo_url, 'git@github.com:catsenior/my_citiesocial.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :branch, 'main'
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/deploy/my_citiesocial'
-set :rvm_ruby_version, '2.6.6' # Defaults to: 'default'
-set :rvm_custom_path, '/usr/share/rvm'
-set :rvm_type, :user
+
 # set :rvm_custom_path, '~/.myveryownrvm' # only needed if not detected
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
-set :scm, :git
+
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
