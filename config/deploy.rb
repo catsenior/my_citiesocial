@@ -4,14 +4,14 @@ lock '~> 3.17.0'
 
 set :application, 'my_citiesocial'
 set :repo_url, 'git@github.com:catsenior/my_citiesocial.git'
-set :deploy_to, "/home/deploy/#{fetch :application}"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :branch, 'main'
-# Default deploy_to directory is /var/www/my_app_name
 
-# set :rvm_custom_path, '~/.myveryownrvm' # only needed if not detected
+# Default deploy_to directory is /var/www/my_app_name
+# set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, '/home/deploy/my_citiesocial'
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
@@ -23,13 +23,12 @@ set :branch, 'main'
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_files, 'config/database.yml', 'config/master.key'
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'tmp/webpacker', 'public/system', 'vendor',
        'storage'
 
-set :passenger_restart_with_touch, true
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
@@ -41,3 +40,4 @@ set :keep_releases, 5
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+set :passenger_restart_with_touch, true

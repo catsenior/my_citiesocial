@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: my_citiesocial_production
+  database: my_citiesocial_development
   username: my_citiesocial
   password: <%= ENV['MY_CITIESOCIAL_DATABASE_PASSWORD'] %>
+
